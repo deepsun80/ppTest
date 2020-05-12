@@ -1,0 +1,88 @@
+{
+  "name": "paypossible",
+  "author": "Sandeep Chandran",
+  "scripts": {
+    "build": "next build",
+    "dev": "next",
+    "export": "next export",
+    "fix": "eslint --fix .",
+    "lint": "eslint .",
+    "lint:watch": "npm run lint -- --watch",
+    "netlify": "npm run build && npm run export && cp _redirects out/_redirects",
+    "start": "next start",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@material-ui/core": "latest",
+    "@material-ui/icons": "latest",
+    "@material-ui/styles": "latest",
+    "@sentry/browser": "latest",
+    "@zeit/next-bundle-analyzer": "latest",
+    "acorn": "^7.1.1",
+    "babel-plugin-import-static-files": "latest",
+    "classnames": "^2.2.6",
+    "clsx": "latest",
+    "fg-loadcss": "latest",
+    "jss": "latest",
+    "next": "latest",
+    "next-eslint": "latest",
+    "prop-types": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-dropzone": "^10.2.1",
+    "react-ga": "latest",
+    "react-google-recaptcha": "latest",
+    "react-icons": "^3.10.0",
+    "react-iframe": "^1.8.0",
+    "react-reveal": "^1.2.2",
+    "react-scrollable-anchor": "^0.6.1",
+    "react-text-mask": "^5.4.3",
+    "styled-jsx": "^3.2.1",
+    "webpack": "^4.40.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.2.2",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^9.0.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "check-prop-types": "^1.1.2",
+    "eslint": "^5.8.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^2.10.0",
+    "eslint-config-react-app": "^3.0.4",
+    "eslint-plugin-flowtype": "^2.50.3",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-prettier": "^2.6.2",
+    "eslint-plugin-react": "^7.11.1",
+    "eslint-watch": "^4.0.2",
+    "husky": "^0.14.3",
+    "jest": "^24.9.0",
+    "jest-puppeteer": "^4.3.0",
+    "lint-staged": "^7.2.0",
+    "prettier": "^1.13.7",
+    "puppeteer": "^2.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,json,css}": [
+      "prettier --write",
+      "git add"
+    ],
+    "ignore": [
+      ".next",
+      "node_modules",
+      "out"
+    ]
+  },
+  "eslintIgnore": [
+    ".next",
+    "node_modules",
+    "out"
+  ]
+}

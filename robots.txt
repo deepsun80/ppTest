@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /lead.html
+Sitemap: https://www.paypossible.com/sitemap.xml

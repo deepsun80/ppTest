@@ -1,0 +1,4 @@
+/app/*              https://develop--paypossible-app.netlify.app/app/:splat        200!
+/m/*                /app/m/:splat
+/sign-in/           /app/sign-in
+/faq                https://help.paypossible.com
